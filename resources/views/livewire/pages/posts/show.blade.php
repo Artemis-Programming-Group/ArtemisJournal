@@ -62,7 +62,7 @@ new class extends Component {
 
             <div class="flex items-center justify-between py-6 border-y border-gray-200 dark:border-gray-700">
                 <div class="flex items-center gap-4">
-                    <x-ui.avatar name="{{ $post->user->name }}" size="lg" />
+                    <x-ui.avatar url="{{ $post->user->avatar_url }}" name="{{ $post->user->name }}" size="lg" />
                     <div>
                         <p class="font-semibold">{{ $post->user->name }}</p>
                         <p class="text-sm text-gray-600 dark:text-gray-400">
