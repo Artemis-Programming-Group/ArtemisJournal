@@ -1,0 +1,249 @@
+/* TinyMCE Content Styles - Add this to your page */
+
+/* Wrap your TinyMCE output in a div with class "tinymce-content" */
+.tinymce-content {
+    line-height: 1.75;
+    color: #374151;
+}
+
+/* Dark mode support */
+.dark .tinymce-content {
+    color: #d1d5db;
+}
+
+/* Headings */
+.tinymce-content h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.dark .tinymce-content h1 {
+    color: #f9fafb;
+}
+
+.tinymce-content h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.875rem;
+    line-height: 1.3;
+    color: #111827;
+}
+
+.dark .tinymce-content h2 {
+    color: #f9fafb;
+}
+
+.tinymce-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    color: #111827;
+}
+
+.dark .tinymce-content h3 {
+    color: #f9fafb;
+}
+
+.tinymce-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.dark .tinymce-content h4 {
+    color: #f9fafb;
+}
+
+.tinymce-content h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.dark .tinymce-content h5 {
+    color: #f9fafb;
+}
+
+.tinymce-content h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #111827;
+}
+
+.dark .tinymce-content h6 {
+    color: #f9fafb;
+}
+
+/* Paragraphs */
+.tinymce-content p {
+    margin-bottom: 1.25rem;
+}
+
+/* Links */
+.tinymce-content a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.tinymce-content a:hover {
+    color: #1d4ed8;
+}
+
+.dark .tinymce-content a {
+    color: #60a5fa;
+}
+
+.dark .tinymce-content a:hover {
+    color: #93c5fd;
+}
+
+/* Lists */
+.tinymce-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tinymce-content ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tinymce-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.tinymce-content ul ul,
+.tinymce-content ol ol,
+.tinymce-content ul ol,
+.tinymce-content ol ul {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Nested list styles */
+.tinymce-content ul ul {
+    list-style-type: circle;
+}
+
+.tinymce-content ul ul ul {
+    list-style-type: square;
+}
+
+/* Blockquotes */
+.tinymce-content blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #6b7280;
+}
+
+.dark .tinymce-content blockquote {
+    border-left-color: #4b5563;
+    color: #9ca3af;
+}
+
+/* Code */
+.tinymce-content code {
+    background-color: #f3f4f6;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    font-family: 'Courier New', monospace;
+    color: #1f2937;
+}
+
+.dark .tinymce-content code {
+    background-color: #374151;
+    color: #e5e7eb;
+}
+
+.tinymce-content pre {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1.25rem;
+}
+
+.dark .tinymce-content pre {
+    background-color: #111827;
+}
+
+.tinymce-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* Images */
+.tinymce-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Horizontal rule */
+.tinymce-content hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0;
+}
+
+.dark .tinymce-content hr {
+    border-top-color: #4b5563;
+}
+
+/* Tables */
+.tinymce-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.25rem;
+}
+
+.tinymce-content th,
+.tinymce-content td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.tinymce-content th {
+    background-color: #f9fafb;
+    font-weight: 600;
+}
+
+/* Strong and emphasis */
+.tinymce-content strong {
+    font-weight: 700;
+}
+
+.tinymce-content em {
+    font-style: italic;
+}
+
+/* First paragraph larger (optional - remove if not needed) */
+.tinymce-content>p:first-child {
+    font-size: 1.125rem;
+}

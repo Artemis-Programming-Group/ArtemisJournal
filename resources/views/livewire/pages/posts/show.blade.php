@@ -18,6 +18,9 @@ new class extends Component {
     }
 };
 ?>
+<x-slot:style>
+    <link rel="stylesheet" href="/assets/css/tiny-content-base-style.css">
+</x-slot:style>
 
 <div>
     <!-- Navigation -->
@@ -102,7 +105,7 @@ new class extends Component {
         @endif
 
         <!-- Main Content -->
-        <section class="prose dark:prose-invert max-w-none mb-12">
+        <section class="tinymce-content prose dark:prose-invert max-w-none mb-12">
             {!! $post->content !!}
         </section>
 
