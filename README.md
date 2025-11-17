@@ -1,59 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ArtemisJournal
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About This Project
 
-## About Laravel
+Hello everyone!
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project is for my personal use as a simple blog app. I created it with the help of Claude AI (free subscription), and the development time took about 16 hours.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+I just wanted to share this project with anyone who wants a simple website to post their ideas on the web. There is still a little work that needs to be done on this project, but for now, it's personally enough for me. However, I'm open to any ideas you may have, and you can even make a version with more features based on your needs.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation
 
-## Learning Laravel
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Artemis-Programming-Group/ArtemisJournal.git
+cd ArtemisJournal
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 2. Install PHP Dependencies
+```bash
+composer install
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3. Configure Environment
+```bash
+cp .env.example .env
+```
+> **Note:** Edit the `.env` file and change the necessary configuration (database, app URL, etc.)
 
-## Laravel Sponsors
+### 4. Generate Application Key
+```bash
+php artisan key:generate
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 5. Run Database Migrations
+```bash
+php artisan migrate --seed
+```
+> **Important:** In `DatabaseSeeder`, there is code for creating a user. Please update it with your own data. Currently, my information is there; if you like, you can leave it and let me know when you create your blog - I'd be happy to see your website too!
 
-### Premium Partners
+### 6. Install Frontend Dependencies
+```bash
+npm install
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 7. Build Assets
+```bash
+npm run build
+```
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## درباره این پروژه
 
-## Code of Conduct
+سلام دوستان!
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+این پروژه برای استفاده شخصی من به عنوان یک اپلیکیشن بلاگ ساده است. من آن را با کمک Claude AI (اشتراک رایگان) ساختم و زمان توسعه آن حدود ۱۶ ساعت طول کشید.
 
-## Security Vulnerabilities
+من فقط می‌خواستم این پروژه را با هر کسی که می‌خواهد یک وبسایت ساده برای انتشار ایده‌هایش در وب داشته باشد، به اشتراک بگذارم. همچنین هنوز کمی کار باقی مانده که باید روی این پروژه انجام شود، اما در حال حاضر شخصاً برای من کافی است. با این حال، من به هر ایده‌ای که ممکن است داشته باشید باز هستم و حتی می‌توانید یک نسخه با ویژگی‌های بیشتر بر اساس نیازهای خودتان بسازید.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## نصب و راه‌اندازی
 
-## License
+### ۱. دانلود مخزن
+```bash
+git clone https://github.com/Artemis-Programming-Group/ArtemisJournal.git
+cd ArtemisJournal
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### ۲. نصب وابستگی‌های PHP
+```bash
+composer install
+```
+
+### ۳. تنظیم محیط
+```bash
+cp .env.example .env
+```
+> **توجه:** فایل `.env` را ویرایش کرده و تنظیمات لازم (دیتابیس، آدرس اپلیکیشن و غیره) را تغییر دهید
+
+### ۴. ساخت کلید اپلیکیشن
+```bash
+php artisan key:generate
+```
+
+### ۵. اجرای مایگریشن‌های دیتابیس
+```bash
+php artisan migrate --seed
+```
+> **مهم:** در `DatabaseSeeder` کدی برای ساخت کاربر وجود دارد. لطفاً آن را با اطلاعات خودتان به‌روزرسانی کنید. در حال حاضر اطلاعات من آنجاست؛ اگر دوست دارید، می‌توانید آن را نگه دارید و وقتی بلاگ خودتان را ساختید به من بگویید - خوشحال می‌شوم وبسایت شما را هم ببینم!
+
+### ۶. نصب وابستگی‌های فرانت‌اند
+```bash
+npm install
+```
+
+### ۷. ساخت فایل‌های استاتیک
+```bash
+npm run build
+```
+
+
