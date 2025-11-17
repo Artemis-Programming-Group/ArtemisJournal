@@ -1,0 +1,239 @@
+/* Utility class for Alpine.js cloaking */
+[x-cloak] {
+    display: none !important;
+}
+
+/* Toolbar Styles */
+.tiptap-toolbar {
+    @apply border border-gray-300 dark:border-gray-600 rounded-t-lg bg-gray-50 dark:bg-gray-800 p-2;
+}
+
+.tiptap-toolbar-inner {
+    @apply flex flex-wrap gap-1 w-full;
+}
+
+.tiptap-btn {
+    @apply p-2 rounded transition-colors;
+    @apply bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300;
+    @apply hover:bg-blue-500 hover:text-white;
+}
+
+.tiptap-btn.active {
+    @apply bg-blue-600 text-white;
+}
+
+.tiptap-btn:disabled {
+    @apply opacity-50 cursor-not-allowed hover:bg-white dark:hover:bg-gray-700 hover:text-gray-700 dark:hover:text-gray-300;
+}
+
+.tiptap-btn-text {
+    @apply font-bold px-3;
+}
+
+.tiptap-divider {
+    @apply w-px bg-gray-300 dark:bg-gray-600 mx-1;
+}
+
+/* Editor Content Area */
+.tiptap-content {
+    @apply border border-t-0 border-gray-300 dark:border-gray-600 rounded-b-lg;
+    @apply bg-white dark:bg-gray-700 p-4 min-h-[200px];
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+.tiptap-content.error {
+    @apply border-red-500;
+}
+
+/* ProseMirror Editor Styles */
+.ProseMirror {
+    @apply outline-none min-h-[200px];
+    @apply text-gray-900 dark:text-gray-100;
+}
+
+.ProseMirror p {
+    @apply my-2;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    @apply text-gray-400 dark:text-gray-500 float-left h-0 pointer-events-none;
+}
+
+.ProseMirror h1 {
+    @apply text-3xl font-bold my-4;
+}
+
+.ProseMirror h2 {
+    @apply text-2xl font-bold my-3;
+}
+
+.ProseMirror h3 {
+    @apply text-xl font-bold my-2;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+    @apply pl-6 my-2;
+}
+
+.ProseMirror ul {
+    @apply list-disc;
+}
+
+.ProseMirror ol {
+    @apply list-decimal;
+}
+
+.ProseMirror li {
+    @apply my-1;
+}
+
+.ProseMirror li p {
+    @apply my-0;
+}
+
+.ProseMirror code {
+    @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded font-mono text-sm;
+    @apply text-pink-600 dark:text-pink-400;
+}
+
+.ProseMirror pre {
+    @apply bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto my-4;
+    @apply font-mono text-sm leading-relaxed;
+}
+
+.ProseMirror pre code {
+    @apply bg-transparent p-0 text-inherit;
+}
+
+.ProseMirror blockquote {
+    @apply border-l-4 border-blue-500 pl-4 my-4;
+    @apply text-gray-600 dark:text-gray-400 italic;
+}
+
+.ProseMirror hr {
+    @apply border-0 border-t-2 border-gray-300 dark:border-gray-600 my-6;
+}
+
+.ProseMirror mark {
+    @apply bg-yellow-200 dark:bg-yellow-900 px-1 rounded;
+}
+
+.ProseMirror a {
+    @apply text-blue-600 dark:text-blue-400 underline;
+}
+
+.ProseMirror strong {
+    @apply font-bold;
+}
+
+.ProseMirror em {
+    @apply italic;
+}
+
+.ProseMirror u {
+    @apply underline;
+}
+
+.ProseMirror s {
+    @apply line-through;
+}
+
+/* Text Alignment */
+.ProseMirror [style*="text-align: left"] {
+    @apply text-left;
+}
+
+.ProseMirror [style*="text-align: center"] {
+    @apply text-center;
+}
+
+.ProseMirror [style*="text-align: right"] {
+    @apply text-right;
+}
+
+.ProseMirror [style*="text-align: justify"] {
+    @apply text-justify;
+}
+
+/* Syntax Highlighting for Code Blocks */
+.hljs-comment,
+.hljs-quote {
+    @apply text-gray-500 italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+    @apply text-purple-400 font-semibold;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type {
+    @apply text-green-400;
+}
+
+.hljs-number {
+    @apply text-orange-400;
+}
+
+.hljs-function {
+    @apply text-blue-400;
+}
+
+.hljs-params {
+    @apply text-gray-300;
+}
+
+.hljs-attr {
+    @apply text-orange-400;
+}
+
+.hljs-variable {
+    @apply text-red-400;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+    @apply text-cyan-400;
+}
+
+.hljs-meta {
+    @apply text-blue-400;
+}
+
+.hljs-deletion {
+    @apply text-red-400;
+}
+
+.hljs-addition {
+    @apply text-green-400;
+}
+
+.hljs-emphasis {
+    @apply italic;
+}
+
+.hljs-strong {
+    @apply font-bold;
+}
+
+.hljs-tag {
+    @apply text-blue-400;
+}
+
+.hljs-name {
+    @apply text-purple-400;
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+    @apply text-yellow-400;
+}
