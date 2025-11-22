@@ -42,6 +42,8 @@
             const isSmallScreen = window.matchMedia('(max-width: 1023.5px)').matches;
 
             tinymce.init({
+                resize: true,
+                min_height: 500,
                 selector: 'textarea.tiny-editor',
                 language: 'fa',
                 plugins: [
