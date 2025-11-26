@@ -16,12 +16,12 @@ class Tag extends Model
 
         static::creating(function ($tag) {
             if (!$tag->slug) {
-                $tag->slug = Str::slug($tag->name);
+                $tag->slug = createPersianSlug($tag->name);
             }
         });
 
         static::updating(function ($tag) {
-            $tag->slug = Str::slug($tag->name);
+            $tag->slug = createPersianSlug($tag->name);
         });
     }
 

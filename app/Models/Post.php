@@ -38,13 +38,13 @@ class Post extends Model
 
         static::creating(function ($post) {
             if (!$post->slug) {
-                $post->slug = Str::slug($post->title);
+                $post->slug = createPersianSlug($post->title);
             }
         });
 
         static::updating(function ($post) {
             if ($post->isDirty('title')) {
-                $post->slug = Str::slug($post->title);
+                $post->slug = createPersianSlug($post->title);
             }
         });
     }
