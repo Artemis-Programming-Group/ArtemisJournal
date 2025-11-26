@@ -77,8 +77,11 @@ new class extends Component {
                     </div>
                 </div>
                 <div class="text-right text-sm text-gray-600 dark:text-gray-400">
-                    <p>{{ $post->created_at->format('F j, Y') }}</p>
-                    <p>{{ $post->reading_time }}</p>
+                    <p>{{ verta($post->created_at)->format('j F , Y') }}</p>
+                    <p>
+                        {{ __("Reading Time") }}:
+                        {{ $post->reading_time }}
+                    </p>
                 </div>
             </div>
         </header>

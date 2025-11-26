@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 
+## [1.4.1] - 2025-11-26
+
+### Fixed
+- Corrected Blade syntax issues in `resources/views/components/seo/post.blade.php`
+  which caused errors on the post page when certain fields were null or missing.
+- Improved JSON-LD generation with safe fallbacks for:
+  - image
+  - author
+  - meta keywords
+  - updated_at vs created_at
+- Normalized SEO description using `Str::squish()` without breaking Blade rendering.
+- Consolidated OG/Twitter image handling to always use an absolute URL.
+- Improved keywords fallback to safely use tags when no meta value exists.
+
+### Changed 
+- post details date to jalali
+
+---
+
 ## [1.4.0] - 2025-11-26
 
 ### Added
