@@ -77,7 +77,7 @@ new class extends Component {
             $this->post->tags()->sync($this->tags ?? []);
         }
 
-        $this->redirectRoute('dashboard');
+        $this->redirect(route('dashboard'), true);
     }
 };
 ?>

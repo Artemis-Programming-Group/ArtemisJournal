@@ -43,7 +43,7 @@ new class extends Component {
 
         session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        $this->redirect(route('dashboard' , true));
     }
 
     public function ensureIsNotRateLimited(): void

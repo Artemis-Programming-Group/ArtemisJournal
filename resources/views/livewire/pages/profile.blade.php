@@ -33,7 +33,6 @@ new class extends Component {
         $this->city = $user->city ?? null;
         $this->website = $user->website ?? null;
         $this->avatar_preview = $user->avatar_url ?? null;
-
     }
 
     public function updatedAvatar(): void
@@ -110,7 +109,8 @@ new class extends Component {
         $user->delete();
 
         auth()->logout();
-        redirect()->route('home');
+
+        $this->redirect(route('home'), true);
     }
 };
 ?>

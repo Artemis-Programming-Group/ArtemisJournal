@@ -60,7 +60,7 @@ new class extends Component {
             $post->tags()->attach($this->tags);
         }
 
-        $this->redirectRoute('dashboard');
+        $this->redirect(route('dashboard') , true);
     }
 };
 ?>

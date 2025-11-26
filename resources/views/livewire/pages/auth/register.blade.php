@@ -38,7 +38,7 @@ new class extends Component {
 
         Auth::login($user);
 
-        return redirect(route('home', absolute: false));
+        $this->redirect(route('home') , true);
     }
 }; ?>
 
