@@ -22,6 +22,12 @@ new class extends Component {
     <link rel="stylesheet" href="/assets/css/tiny-content-base-style.css">
 </x-slot:style>
 
+<x-slot:meta>
+    <!-- SEO generate for post by system -->
+    <x-seo.post :post="$post" />
+    <!-- SEO generate for post by system -->
+</x-slot:meta>
+
 <div>
     <!-- Navigation -->
     <nav class="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 z-40">

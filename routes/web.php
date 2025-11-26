@@ -3,13 +3,12 @@
 use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
-
-
-
+use App\Models\Post;
+use PHPUnit\Framework\MockObject\ReturnValueNotConfiguredException;
 
 Volt::route('/', 'pages.home')->name('home');
 Volt::route('posts', 'pages.posts.index')->name('posts');
-Volt::route('post/{post:slug}/show', 'pages.posts.show')->name('post-details');
+Volt::route('post/{post:slug}', 'pages.posts.show')->name('post-details');
 
 
 Route::middleware('guest')->group(function () {
@@ -34,7 +33,11 @@ Route::middleware('auth')->prefix('user/')->group(function () {
     Volt::route('post/create', 'pages.posts.create')->name('posts.create');
     Volt::route('post/{post:slug}/show', 'pages.posts.show')->name('posts.show');
     Volt::route('post/{post}/edit', 'pages.posts.edit')->name('posts.edit');
-    Volt::route('post/{post}/destroy', 'pages.posts.edit')->name('posts.destroy');
+
+    Route::delete('post/{post}/destroy', function ($post) {
+        Post::findOrFail($post)->delete();
+        return redirect()->route('dashboard');
+    })->name('posts.destroy');
 });
 
 
