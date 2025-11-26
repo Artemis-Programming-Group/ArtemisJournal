@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.3.0] - 2025-11-26
+
+### Added
+- RSS feed support using `spatie/laravel-feed`.
+- `Route::feeds()` to enable `/feed` endpoint for consuming latest posts.
+- `toFeedItem()` and `getFeedItems()` methods on the `Post` model to transform posts into RSS items.
+- RSS auto-discovery meta tag in the main layout (`<link rel="alternate" type="application/rss+xml">`).
+- Feed entries now use `seo_description` for their summary for better SEO + consistency.
+
+### Changed
+- Unified post URLs inside RSS feed to match canonical post URLs.
+- Ensured feed returns only published posts, ordered by latest.
+
+---
+
 ## [1.2.0] - 2025-11-26
 
 ### Added

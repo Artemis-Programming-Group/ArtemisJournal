@@ -21,6 +21,7 @@
         "maatwebsite/excel": "^3.1",
         "opcodesio/log-viewer": "^3.21",
         "shetabit/payment": "^6.3",
+        "spatie/laravel-feed": "^4.4",
         "spatie/laravel-permission": "^6.23"
     },
     "require-dev": {

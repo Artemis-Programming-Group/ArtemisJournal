@@ -40,6 +40,7 @@ Route::middleware('auth')->prefix('user/')->group(function () {
     })->name('posts.destroy');
 });
 
+Route::feeds();
 
 Route::view('theme-page-sample-1', 'theme-page-sample-1');
 Route::view('theme-page-sample-2', 'theme-page-sample-2');

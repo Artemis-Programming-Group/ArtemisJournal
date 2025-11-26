@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use App\Traits\HasPostMeta;
@@ -8,7 +9,11 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
-class Post extends Model
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+
+
+class Post extends Model implements Feedable
 {
     use HasFactory, HasPostMeta;
 
@@ -88,5 +93,32 @@ class Post extends Model
     {
         if (!$this->old_price) return 0;
         return round((($this->old_price - $this->price) / $this->old_price) * 100);
+    }
+
+    /**
+     * Convert a single post to a feed item.
+     */
+    public function toFeedItem(): FeedItem
+    {
+        $url = route('post-details', $this->slug);
+
+        return FeedItem::create()
+            ->id($url) // this becomes <guid>
+            ->title($this->title)
+            ->summary($this->seo_description)
+            ->updated($this->updated_at ?? $this->created_at)
+            ->link($url)
+            ->authorName($this->user->name);
+    }
+
+    /**
+     * Items that will appear in the feed.
+     */
+    public static function getFeedItems()
+    {
+        return static::published()
+            ->latest()
+            ->limit(50)
+            ->get();
     }
 }
