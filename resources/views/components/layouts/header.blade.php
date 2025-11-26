@@ -14,7 +14,7 @@
             <!-- Center CTA (Desktop Only) -->
             @if (!Route::is('posts.index'))
             <div class="hidden md:flex">
-                <a wire:navigate href="{{ route('posts.index') }}" class="group inline-flex items-center gap-3 px-5 py-2 rounded-full bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-md hover:shadow-blue-200 dark:hover:shadow-blue-900/30">
+                <a wire:navigate href="{{ route('posts') }}" class="group inline-flex items-center gap-3 px-5 py-2 rounded-full bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-md hover:shadow-blue-200 dark:hover:shadow-blue-900/30">
                     <div class="w-8 h-8 rounded-full bg-linear-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white">
                         <i class="ri-book-line text-sm"></i>
                     </div>
@@ -68,7 +68,7 @@
             <!-- Mobile CTA -->
             @if (!Route::is('posts.index'))
             <div class="mb-4">
-                <a wire:navigate href="{{ route('posts.index') }}" @click="mobileMenuOpen = false" class="w-full block group px-4 py-3 rounded-lg bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 transition-all">
+                <a wire:navigate href="{{ route('posts') }}" @click="mobileMenuOpen = false" class="w-full block group px-4 py-3 rounded-lg bg-linear-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 transition-all">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-full bg-linear-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white shrink-0">
                             <i class="ri-book-line text-sm"></i>

@@ -118,13 +118,16 @@ new class extends Component {
             @foreach($this->posts as $post)
             <article class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                 @if($post->featured_image)
-                <a wireNavigate href="{{ route('posts.show', $post->slug) }}" class="block">
+                <a wireNavigate href="{{ Route::is('posts') ? route('post-details' , $post->slug) : route('posts.show', $post->slug) }}" class="block">
                     <img src="{{ asset('upload/' . $post->featured_image) }}" alt="{{ $post->title }}" class="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300">
                 </a>
                 @else
-                <div class="aspect-video bg-linear-to-br from-purple-400 to-pink-400 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                    <i class="ri-code-line text-white text-6xl opacity-30"></i>
-                </div>
+                <a wireNavigate href="{{ Route::is('posts') ? route('post-details' , $post->slug) : route('posts.show', $post->slug) }}" class="block">
+                    <div class="aspect-video bg-linear-to-br from-purple-400 to-pink-400 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                        <i class="ri-code-line text-white text-6xl opacity-30"></i>
+                    </div>
+                </a>
+
                 @endif
 
                 <div class="p-6">
@@ -134,7 +137,7 @@ new class extends Component {
                         @endforeach
                     </div>
 
-                    <a wireNavigate href="{{ route('posts.show', $post->slug) }}" class="block">
+                    <a wireNavigate href="{{ Route::is('posts') ? route('post-details' , $post->slug) : route('posts.show', $post->slug) }}" class="block">
                         <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">{{ $post->title }}</h3>
                     </a>
 

@@ -9,14 +9,15 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Volt::route('/', 'pages.home')->name('home');
 Volt::route('posts', 'pages.posts.index')->name('posts');
-Volt::route('posts/{slug}/details', 'pages.post-details')->name('posts-details');
+Volt::route('post/{post:slug}/show', 'pages.posts.show')->name('post-details');
 
 
 Route::middleware('guest')->group(function () {
     Volt::route('register', 'pages.auth.register')->name('register');
     Volt::route('login', 'pages.auth.login')->name('login');
 });
-Route::middleware('auth')->group(function () {
+
+Route::middleware('auth')->prefix('user/')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
@@ -40,5 +41,3 @@ Route::middleware('auth')->group(function () {
 Route::view('theme-page-sample-1', 'theme-page-sample-1');
 Route::view('theme-page-sample-2', 'theme-page-sample-2');
 Route::view('theme-page-sample-3', 'theme-page-sample-3');
-
-
