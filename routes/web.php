@@ -41,6 +41,7 @@ Route::middleware('auth')->prefix('user/')->group(function () {
 });
 
 Route::feeds();
+Route::view('/offline', 'offline')->name('offline');
 
 Route::view('theme-page-sample-1', 'theme-page-sample-1');
 Route::view('theme-page-sample-2', 'theme-page-sample-2');

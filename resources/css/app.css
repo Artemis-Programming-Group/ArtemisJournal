@@ -23,3 +23,25 @@
 * {
     font-family: 'IRANSans-FaNum', 'IRANYekan';
 }
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header "
+        "main "
+        "footer ";
+    grid-template-rows: auto 1fr auto;
+
+}
+
+body>header {
+    grid-area: header;
+}
+
+body>main {
+    grid-area: main;
+}
+
+body>footer {
+    grid-area: footer;
+}

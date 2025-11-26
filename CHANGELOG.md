@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+
+## [1.4.0] - 2025-11-26
+
+### Added
+- Basic PWA support with `public/manifest.webmanifest`.
+- Service worker at `public/service-worker.js` to:
+  - Pre-cache home, manifest, and offline page.
+  - Provide offline fallback for HTML requests.
+  - Cache static assets with a cache-first strategy.
+- Offline fallback page at `resources/views/offline.blade.php`.
+- Route `/offline` for showing a friendly offline message.
+- PWA-related meta tags and links in the main layout:
+  - `<link rel="manifest">`
+  - `theme-color`
+  - `apple-touch-icon`
+  - Service worker registration script.
+- Add grid style to body 
+
+### Changed
+- Main layout (`components/layouts/app.blade.php`) now includes PWA meta tags and service worker registration script.
+
+
+--- 
+
+
 ## [1.3.0] - 2025-11-26
 
 ### Added
